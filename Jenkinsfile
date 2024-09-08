@@ -10,6 +10,8 @@ pipeline {
 			}
 		}
 		stage ('CodeReview') {
+			steps {
+			}
 		}
 		stage ('Test') {
 			steps {
@@ -22,8 +24,12 @@ pipeline {
 			}
 		}
 		stage ('Package') {
+			steps {
+			}
 		}
 		stage ('Deploy') {
+			steps {
+			}
 		}
 	}
 }
