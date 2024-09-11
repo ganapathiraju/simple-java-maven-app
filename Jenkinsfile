@@ -11,7 +11,7 @@ pipeline {
 		}
 		stage ('CodeReview') {
 			steps {
-				sh 'mvn -P metrics pmd:pmd
+				sh 'mvn -P metrics pmd:pmd'
 			}
 		}
 		stage ('Test') {
