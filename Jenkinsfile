@@ -11,7 +11,7 @@ pipeline {
 		}
 		stage ('CodeReview') {
 			steps {
-				gerritReview labels: [Verified 0] 
+				gerritReview labels: [Verified: 0] 
 				echo 'Hello World'
 			}
 			post {
