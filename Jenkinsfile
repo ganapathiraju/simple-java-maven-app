@@ -11,6 +11,7 @@ pipeline {
 		}
 		stage ('CodeReview') {
 			steps {
+				sh 'mvn -P metrics pmd:pmd
 			}
 		}
 		stage ('Test') {
@@ -25,10 +26,7 @@ pipeline {
 		}
 		stage ('Package') {
 			steps {
-			}
-		}
-		stage ('Deploy') {
-			steps {
+				sh 'mvn clean package'
 			}
 		}
 	}
